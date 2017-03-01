@@ -10,6 +10,5 @@ namespace FakeTrello.Models
     {
         [Key]
         public int TagId { get; set; }
-
     }
 }
