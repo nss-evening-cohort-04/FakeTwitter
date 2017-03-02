@@ -23,5 +23,10 @@ namespace FakeTrello.Models
         [MaxLength(60)]
         public string FullName { get; set; }
 
+        public ApplicationUser BaseUser { get; set; } //this is creating the relationship btw tables (1 to 1)- this is how you tie together classes
+        //ApplicationUser is from the IdentityModels file
+
+        public List<Board> Boards { get; set; } // 1 to many (boards) relationship
+
     }
 }
