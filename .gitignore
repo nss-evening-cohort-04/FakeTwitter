@@ -241,6 +241,6 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 
-../FakeTrelloERD.jpg.vpp
-../FakeTrelloERD.jpg.vpp.bak_000d
-../FakeTrelloERD.jpg.vpp.bak_001f
+FakeTrelloERD.jpg.vpp
+FakeTrelloERD.jpg.vpp.bak_000d
+FakeTrelloERD.jpg.vpp.bak_001f
