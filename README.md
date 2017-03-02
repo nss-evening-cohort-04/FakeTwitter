@@ -17,4 +17,4 @@
 
 ### Fake Trello ERD
 
-![Alt text](FakeTrello\FakeTrello.jpg?raw=true "Optional Title")
+![Alt text](/FakeTrello.jpg?raw=true "Optional Title")
