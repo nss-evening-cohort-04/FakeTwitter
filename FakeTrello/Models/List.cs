@@ -11,6 +11,9 @@ namespace FakeTrello.Models
         [Key]
         public int ListId { get; set; }
 
-        public string Name { get; set; }
+        [MaxLength(50)]
+        public string ListName { get; set; }
+
+        public List<Card> Cards { get; set; }
     }
 }

@@ -16,14 +16,20 @@ namespace FakeTrello.Models
         //stacking of properties applies multiple annotations
         //to the following property. failed = database failed constraint
         [MinLength(10)]  
-        [MaxLength(60)]
+        [MaxLength(50)]
         public string Email { get; set; }
         
-        [MaxLength(60)]
+        [MaxLength(50)]
         public string Username { get; set; }
-        
-        [MaxLength(60)]
-        public string FullName { get; set; }
+
+        [MaxLength(50)]
+        public string Password { get; set; }
+
+        [MaxLength(50)]
+        public string FirstName { get; set; }
+
+        [MaxLength(50)]
+        public string LastName { get; set; }
 
         public ApplicationUser BaseUser { get; set; } // creates one to one relationship to another table
 

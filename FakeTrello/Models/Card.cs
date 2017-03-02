@@ -14,5 +14,7 @@ namespace FakeTrello.Models
         public string Title { get; set; }
 
         public string Description { get; set; }
+
+        public List<Add> Adds { get; set; }
     }
 }

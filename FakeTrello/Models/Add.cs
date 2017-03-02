@@ -6,9 +6,8 @@ using System.Web;
 
 namespace FakeTrello.Models
 {
-    public class Tag
+    public class Add
     {
-        [Key]
-        public int TagId { get; set; }
+        
     }
 }

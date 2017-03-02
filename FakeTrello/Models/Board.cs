@@ -11,8 +11,12 @@ namespace FakeTrello.Models
         [Key]
         public int BoardId { get; set; }
 
-        public string Name { get; set; }
+        [MaxLength(50)]
+        public string BoardName { get; set; }
 
+        [MaxLength(50)]
         public string URL { get; set; }
+
+        public List<List> Lists { get; set; }
     }
 }
