@@ -29,7 +29,8 @@ namespace FakeTrello.Models
         //****List<Board> and Icollection<Board> are navigation properties
         public List<Board> Boards { get; set; } // 1 to many (boards) relationship
 
-        public ICollection<Board> Boards { get; set; } // this is the same as the above- they are both  nav properties
+        //SAME AS ABOVE -but we are using list
+        //public ICollection<Board> Boards { get; set; } // this is the same as the above- they are both  nav properties
 
     }
 }
