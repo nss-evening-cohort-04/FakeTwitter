@@ -14,7 +14,9 @@ namespace FakeTrello.Models
         public string Name { get; set; }
 
         public string Url { get; set; }
+        
+        public TrelloUser Owner { get; set; }
 
-        public List<TrelloList> TrelloLists { get; set; }
+        public ICollection<TrelloList> TrelloLists { get; set; }
     }
 }
