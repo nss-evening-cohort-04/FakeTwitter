@@ -33,6 +33,7 @@ namespace FakeTrello.Models
 
         public ApplicationUser BaseUser { get; set; } // creates one to one relationship to another table
 
-        public List<Board> Boards { get; set; } // 1 to many (boards) relationship. Navigation property. Does join sql statement for you
+        public List<Board> Boards { get; set; } // 1 to many (boards) relationship. Navigation property. Does join sql statement for you. Entity knows how to interpret that relationship.
+
     }
 }
