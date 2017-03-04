@@ -18,6 +18,5 @@ namespace FakeTrello.Models
         public TrelloUser User { get; set; } // 1 to 1 relationship
 
         public List<List> Lists { get; set; } // 1 to many (lists) relationship
-
     }
 }
