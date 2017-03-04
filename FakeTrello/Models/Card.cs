@@ -14,5 +14,8 @@ namespace FakeTrello.Models
         public string Title { get; set; }
 
         public string Description { get; set; }
+
+        // returns the list the card belongs to
+        public List BelongsTo { get; set; }
     }
 }
