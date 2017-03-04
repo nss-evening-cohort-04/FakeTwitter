@@ -11,7 +11,7 @@ namespace FakeTrello.Models
         [Key]
         public int CardId { get; set; } //Primary key
 
-        public string Name { get; set; } //Card Name
+        public string Title { get; set; } //Card Name
 
         public string Description { get; set; } //Card Description
 

@@ -15,7 +15,7 @@ namespace FakeTrello.Models
 
         public string URL { get; set; } //Board URL
 
-        public TrelloUser User { get; set; } // 1 to 1 relationship
+        public TrelloUser Owner { get; set; } // 1 to 1 relationship
 
         public List<List> Lists { get; set; } // 1 to many (lists) relationship
     }
