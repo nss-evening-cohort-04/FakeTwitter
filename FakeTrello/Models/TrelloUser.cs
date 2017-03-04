@@ -26,7 +26,10 @@ namespace FakeTrello.Models
         public ApplicationUser BaseUser { get; set; } //this is creating the relationship btw tables (1 to 1)- this is how you tie together classes
         //ApplicationUser is from the IdentityModels file
 
+        //****List<Board> and Icollection<Board> are navigation properties
         public List<Board> Boards { get; set; } // 1 to many (boards) relationship
+
+        public ICollection<Board> Boards { get; set; } // this is the same as the above- they are both  nav properties
 
     }
 }

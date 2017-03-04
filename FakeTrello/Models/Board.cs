@@ -17,5 +17,6 @@ namespace FakeTrello.Models
 
         public List<List> Lists { get; set; } // List # 1 a keyword //<> List # 2 is a File Ref // Lists = new var name
 
+        public TrelloUser Owner { get; set; } //owner and boards are NAVIGATION PROPERTIES
     }
 }
