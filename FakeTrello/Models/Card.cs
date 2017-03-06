@@ -14,6 +14,9 @@ namespace FakeTrello.Models
         public string Title { get; set; }
 
         public string Description { get; set; }
+        
+        // List of tasks in a checklist
+        public List Checklist { get; set; }
 
         // Auxiliary: given a card instance.
         // return the list, it belongs to.  
