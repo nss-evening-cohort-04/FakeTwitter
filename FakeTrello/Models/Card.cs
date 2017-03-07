@@ -11,9 +11,13 @@ namespace FakeTrello.Models
         [Key]
         public int CardId { get; set; }
 
-        public string Title { get; set; }
+        [Required]
+        [MaxLength(255)]
+        public string Name { get; set; }
 
-        public string Description { get; set; }
+        [Required]
+        [MaxLength(255)]
+        public string Content { get; set; }
 
         // returns the list the card belongs to
         public List BelongsTo { get; set; }

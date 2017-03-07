@@ -8,24 +8,22 @@ using System.Web;
 
 namespace FakeTrello.Models
 {
-    public class TrelloUser
+    public class User
     {
         [Key]
-        public int TrelloUserId { get; set; } //Primary Key
+        public int UserId { get; set; } //Primary Key
 
-        // Stacking of properties applies to multiple annotations
-        // to the following property
-        [MinLength(10)]
-        [MaxLength(60)]
-        public string Email { get; set; }
+        [Required]
+        [MaxLength(255)]
+        public string PasswordHash { get; set; }
 
-        [MaxLength(60)]
-        public string Username { get; set; }
-
-        [MaxLength(60)]
+        [Required]
+        [MaxLength(255)]
         public string FullName { get; set; }
 
-        public ApplicationUser BaseUser { get; set; } // 1 to 1 relationship 
+        [Required]
+        [MaxLength(255)]
+        public string Email { get; set; }
 
         public List<Board> Boards { get; set; } // 1 to many (boards) relationship
 

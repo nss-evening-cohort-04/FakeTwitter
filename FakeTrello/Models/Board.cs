@@ -11,12 +11,9 @@ namespace FakeTrello.Models
         [Key]
         public int BoardId { get; set; }
 
-        public string Name { get; set; }
-
-        public string URL { get; set; }
-
-        //Auxillary (not required to define/drive relationship)
-        public TrelloUser Owner { get; set; }
+        [Required]
+        [MaxLength(255)]
+        public string Title { get; set; }
 
         public List<List> Lists { get; set; }
     }
