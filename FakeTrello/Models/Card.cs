@@ -15,7 +15,8 @@ namespace FakeTrello.Models
 
         public string Description { get; set; } //Card Description
 
-        public List List { get; set; } // 1 to 1 relationship
-
+        // Auxiliary: given a card instance,
+        // return the list it belongs to.
+        public List BelongsTo { get; set; }
     }
 }
