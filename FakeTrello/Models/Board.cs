@@ -9,15 +9,14 @@ namespace FakeTrello.Models
     public class Board
     {
         [Key]
-        public int BoardId { get; set; }
+        public int BoardId { get; set; } //Primary key
 
-        public string Name { get; set; }
+        public string Name { get; set; } //Board Name
 
-        public string URL { get; set; }
+        public string URL { get; set; } //Board URL
 
-        // Auxiliary (i.e. not required to drive/define relationship)
-        public TrelloUser Owner { get; set; }
+        public TrelloUser Owner { get; set; } // 1 to 1 relationship
 
-        public List<List> Lists { get; set;}
+        public List<List> Lists { get; set; } // 1 to many (lists) relationship
     }
 }
