@@ -7,12 +7,11 @@ using FakeTrello.Models;
 namespace FakeTrello.DAL
 {
     public class FakeTrelloRepository : IRepository
+    //have absolute control over how things work here.
     {
-
         public FakeTrelloContext Context { get; set; }
-        //private FakeTrelloContext context; // Data member
 
-        public FakeTrelloRepository()
+        public FakeTrelloRepository ()
         {
             Context = new FakeTrelloContext();
         }
@@ -22,11 +21,10 @@ namespace FakeTrello.DAL
             Context = context;
         }
 
-
         public void AddBoard(string name, ApplicationUser owner)
         {
-            Board board = new Board { Name = name, Owner = owner };
-            Context.Boards.Add(board);
+            Board newBoard = new Board { Name = name, Owner = owner };
+            Context.Boards.Add(newBoard);
             Context.SaveChanges();
         }
 
@@ -62,23 +60,13 @@ namespace FakeTrello.DAL
 
         public Board GetBoard(int boardId)
         {
-            // SELECT * FROM Boards WHERE BoardId == boardId 
-            Board found_board = Context.Boards.FirstOrDefault(b => b.BoardId == boardId); // returns null if nothing is found
-            return found_board;
-
-            /* Using .First() throws an exception if nothing is found
-             * try {
-             * Board found_board = Context.Boards.First(b => b.BoardId == boardId); 
-             * return found_board;
-             * } catch(Exception e) {
-             * return null;
-             * }
-             */
+            Board chosenBoard = Context.Boards.FirstOrDefault(fb => fb.BoardId == boardId);
+            return chosenBoard;
         }
 
         public List<Board> GetBoardsFromUser(string userId)
         {
-            throw new NotImplementedException();
+             return Context.Boards.Where(b => b.Owner.Id.ToString() == userId).ToList();
         }
 
         public Card GetCard(int cardId)
@@ -118,7 +106,14 @@ namespace FakeTrello.DAL
 
         public bool RemoveBoard(int boardId)
         {
-            throw new NotImplementedException();
+            Board foundBoard = GetBoard(boardId);
+            if (foundBoard != null)
+            {
+                Context.Boards.Remove(foundBoard);
+                Context.SaveChanges();
+                return true;
+            }
+            return false;
         }
 
         public bool RemoveCard(int cardId)
