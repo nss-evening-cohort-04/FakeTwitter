@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using FakeTrello.Models;
 
-namespace FakeTrello.DAL
+namespace FakeTrello.Controllers.Contracts
 {
     public interface IBoardQuery
     {

@@ -4,9 +4,10 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using FakeTrello.Controllers.Contracts;
 using FakeTrello.Models;
 
-namespace FakeTrello.DAL
+namespace FakeTrello.DAL.Repository
 {
     public class BoardRepository : IBoardManager, IBoardQuery
     {

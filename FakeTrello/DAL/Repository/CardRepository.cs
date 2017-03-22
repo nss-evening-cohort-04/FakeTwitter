@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using FakeTrello.Controllers.Contracts;
 using FakeTrello.Models;
 
-namespace FakeTrello.DAL
+namespace FakeTrello.DAL.Repository
 {
     public class CardRepository : ICardRepository
     {
